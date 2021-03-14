@@ -1,3 +1,2 @@
 
-World(KnowsTheDomain)
 
