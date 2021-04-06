@@ -1,0 +1,66 @@
+Feature: Fruit list
+  In order to make a great smoothie
+  I need some fruit.
+
+  Scenario: List fruit
+    Given the system knows about the following fruit:
+      | name       | color  |
+      | banana     | yellow |
+      | strawberry | red    |
+    When the client requests GET /fruits
+    Then the response should be JSON:
+      """
+      [
+        {"name": "banana", "color": "yellow"},
+        {"name": "strawberry", "color": "red"}
+      ]
+      """
+      
+      expected: "[\n  {\"name\": \"banana\", \"color\": \"yellow\"},\n  
+      {\"name\": \"strawberry\", \"color\": \"red\"}\n]"
+           got: "<!DOCTYPE html>\n<html>\n<head>\n  <style type=\"text/css\">\n  
+      body { text-align:center;font-family...#x2F;fruits&#x27; do\n    
+      &quot;Hello World&quot;\n  end\nend\n</pre>\n  </div>\n</body>\n</html>\n"
+      
+      (compared using ==)
+      
+      Diff:
+      @@ -1,5 +1,25 @@
+      -[
+      -  {"name": "banana", "color": "yellow"},
+      -  {"name": "strawberry", "color": "red"}
+      -]
+      +<!DOCTYPE html>
+      +<html>
+      +<head>
+      +  <style type="text/css">
+      +  body { text-align:center;font-family:helvetica,arial;font-size:22px;
+      +    color:#888;margin:20px}
+      +  #c {margin:0 auto;width:500px;text-align:left}
+      +  </style>
+      +</head>
+      +<body>
+      +  <h2>Sinatra doesn’t know this ditty.</h2>
+      +  <img src='http://example.org/__sinatra__/404.png'>
+      +  <div id="c">
+      +    Try this:
+      +    <pre># in fruit_app.rb
+      +class FruitApp
+      +  get &#x27;&#x2F;fruits&#x27; do
+      +    &quot;Hello World&quot;
+      +  end
+      +end
+      +</pre>
+      +  </div>
+      +</body>
+      +</html>
+       (RSpec::Expectations::ExpectationNotMetError)
+      ./features/step_definitions/rest_steps.rb:6
+      features/fruit_list.feature:11
+
+Failing Scenarios:
+cucumber features/fruit_list.feature:5
+
+1 scenario (1 failed)
+3 steps (1 failed, 2 passed)
+0m0.050s

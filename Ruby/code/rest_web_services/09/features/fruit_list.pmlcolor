@@ -1,0 +1,29 @@
+Feature: Fruit list
+  In order to make a great smoothie
+  I need some fruit.
+
+  Scenario: List fruit
+    Given the system knows about the following fruit:
+      | name       | color  |
+      | banana     | yellow |
+      | strawberry | red    |
+    When the client requests GET /fruits
+      undefined method `get' for #<Object:0x63756b65>
+      Did you mean?  gets
+                     gem (NoMethodError)
+      ./features/step_definitions/rest_steps.rb:2
+      features/fruit_list.feature:10
+    Then the response should be JSON:
+      """
+      [
+        {"name": "banana", "color": "yellow"},
+        {"name": "strawberry", "color": "red"}
+      ]
+      """
+
+Failing Scenarios:
+cucumber features/fruit_list.feature:5
+
+1 scenario (1 failed)
+3 steps (1 failed, 1 skipped, 1 passed)
+0m0.021s

@@ -1,0 +1,24 @@
+Feature: Fruit list
+  In order to make a great smoothie
+  I need some fruit.
+
+  Scenario: List fruit
+    Given the system knows about the following fruit:
+      | name       | color  |
+      | banana     | yellow |
+      | strawberry | red    |
+    When the client requests GET /fruits
+    Then the response should be JSON:
+      """
+      [
+        {"name": "banana", "color": "yellow"},
+        {"name": "strawberry", "color": "red"}
+      ]
+      """
+      TODO (Cucumber::Pending)
+      ./features/step_definitions/rest_steps.rb:6
+      features/fruit_list.feature:11
+
+1 scenario (1 pending)
+3 steps (1 pending, 2 passed)
+0m0.047s

@@ -1,0 +1,36 @@
+Feature: Fruit list
+  In order to make a great smoothie
+  I need some fruit.
+
+  Scenario: List fruit
+    [33mGiven the system knows about the following fruit:[0m
+      | [36mname      [0m[0m |[0m [36mcolor [0m[0m |[0m
+      | [36mbanana    [0m[0m |[0m [36myellow[0m[0m |[0m
+      | [36mstrawberry[0m[0m |[0m [36mred   [0m[0m |[0m
+    [33mWhen the client requests GET /fruits[0m
+    [33mThen the response should be JSON:[0m
+[33m      """[0m
+[33m      [[0m
+[33m        {"name": "banana", "color": "yellow"},[0m
+[33m        {"name": "strawberry", "color": "red"}[0m
+[33m      ][0m
+[33m      """[0m
+
+1 scenario ([33m1 undefined[0m)
+3 steps ([33m3 undefined[0m)
+0m0.015s
+[33m[0m
+[33mYou can implement step definitions for undefined steps with these snippets:[0m
+[33m[0m
+[33mGiven(/^the system knows about the following fruit:$/) do |table|[0m
+[33m  # table is a Cucumber::MultilineArgument::DataTable[0m
+[33m  pending # Write code here that turns the phrase above into concrete actions[0m
+[33mend[0m
+[33m[0m
+[33mWhen(/^the client requests GET \/fruits$/) do[0m
+[33m  pending # Write code here that turns the phrase above into concrete actions[0m
+[33mend[0m
+[33m[0m
+[33mThen(/^the response should be JSON:$/) do |string|[0m
+[33m  pending # Write code here that turns the phrase above into concrete actions[0m
+[33mend[0m

@@ -1,0 +1,17 @@
+Feature: Cash Withdrawal
+
+  Scenario: Successful withdrawal from an account in credit
+    Given I have deposited $100 in my account
+      undefined method `deposit' for #<Account:0x63756b65> (NoMethodError)
+      ./features/step_definitions/account_steps.rb:2
+      features/cash_withdrawal.feature:3
+    When I withdraw $20
+    Then $20 should be dispensed
+    And the balance of my account should be $80
+
+Failing Scenarios:
+cucumber features/cash_withdrawal.feature:2
+
+1 scenario (1 failed)
+4 steps (1 failed, 3 skipped)
+0m0.022s

@@ -1,0 +1,17 @@
+Feature: Cash Withdrawal
+
+  Scenario: Successful withdrawal from an account in credit
+    Given I have deposited $100 in my account
+    When I withdraw $20
+      undefined local variable or method `my_account' for 
+      #<Object:0x63756b65> (NameError)
+      ./features/step_definitions/steps.rb:36
+      features/cash_withdrawal.feature:4
+    Then $20 should be dispensed
+
+Failing Scenarios:
+cucumber features/cash_withdrawal.feature:2
+
+1 scenario (1 failed)
+3 steps (1 failed, 1 skipped, 1 passed)
+0m0.024s

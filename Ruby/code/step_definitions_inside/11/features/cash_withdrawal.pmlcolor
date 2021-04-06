@@ -1,0 +1,13 @@
+Feature: Cash Withdrawal
+
+  Scenario: Successful withdrawal from an account in credit
+    Given I have deposited $100 in my account
+    When I withdraw $20
+    Then $20 should be dispensed
+      TODO (Cucumber::Pending)
+      ./features/step_definitions/steps.rb:49
+      features/cash_withdrawal.feature:5
+
+1 scenario (1 pending)
+3 steps (1 pending, 2 passed)
+0m0.021s

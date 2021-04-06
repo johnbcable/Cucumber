@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+
+gem 'sinatra', '2.0.0.beta.2'
+gem 'json', '2.0.2'
+
+group :test do
+  gem 'cucumber', '3.0.0.pre.1'
+  gem 'rspec', '3.5.0'
+  gem 'rack-test', '0.6.3'
+end

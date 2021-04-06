@@ -1,0 +1,18 @@
+Feature: Cash Withdrawal
+
+  Scenario: Successful withdrawal from an account in credit
+    Given my account has been credited with $100
+    When I withdraw $20
+    Then $20 should be dispensed
+      I'm empty (RuntimeError)
+      ./lib/nice_bank.rb:32
+      ./features/step_definitions/cash_slot_steps.rb:2
+      features/cash_withdrawal.feature:5
+    And the balance of my account should be $80
+
+Failing Scenarios:
+cucumber features/cash_withdrawal.feature:2
+
+1 scenario (1 failed)
+4 steps (1 failed, 1 skipped, 2 passed)
+0m0.022s

@@ -1,0 +1,11 @@
+source 'https://rubygems.org'
+
+gem 'sinatra', '2.0.0.beta.2'
+gem 'json', '2.0.2'
+
+group :test do
+  gem 'cucumber', '3.0.0.pre.1'
+  gem 'rspec', '3.5.0'
+  gem 'httparty', '0.14.0'
+  gem 'childprocess', '0.5.9'
+end
